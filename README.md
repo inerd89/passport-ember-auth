@@ -1,4 +1,4 @@
-# Passport-Ember-Auth - Pre-Release
+# Passport-Ember-Auth (Pre-Release)
 
 Ember-Auth authentication strategy for [Passport](https://github.com/jaredhanson/passport).
 
@@ -59,7 +59,8 @@ as a valid server response when issuing tokens.
 
 ## Examples
 
-For a complete, working example, refer to the [EmberAuth example](https://github.com/inerd89/passport-ember-auth/tree/master/examples/ember-auth).
+Coming soon.
+<!-- For a complete, working example, refer to the [EmberAuth example](https://github.com/inerd89/passport-ember-auth/tree/master/examples/ember-auth). -->
 
 ## Tests
 
