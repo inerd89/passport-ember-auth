@@ -1,0 +1,34 @@
+{
+  "name": "passport-ember-auth",
+  "version": "0.0.1",
+  "description": "Ember-Auth authentication strategy for Passport. See https://github.com/heartsentwined/ember-auth",
+  "keywords": ["passport", "ember", "ember-auth", "auth-token", "token", "authentication"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inerd89/passport-ember-auth.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/passport-ember-auth/issues"
+  },
+  "author": {
+    "name": "Austin Maurer",
+    "email": "r.austin.maurer@gmail.com",
+    "url": "http://www.austinmaurer.co/"
+  },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  } ],
+  "main": "./lib/passport-ember-auth",
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "passport": "~0.1.3"
+  },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "scripts": {
+    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
+  },
+  "engines": { "node": ">= 0.4.0" }
+}
