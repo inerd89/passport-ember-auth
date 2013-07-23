@@ -1,6 +1,6 @@
 {
   "name": "passport-ember-auth",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Ember-Auth authentication strategy for Passport. See https://github.com/heartsentwined/ember-auth",
   "keywords": ["passport", "ember", "ember-auth", "auth-token", "token", "authentication"],
   "repository": {
@@ -30,5 +30,5 @@
   "scripts": {
     "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
   },
-  "engines": { "node": ">= 0.4.0" }
+  "engines": { "node": ">= 0.6.0" }
 }
