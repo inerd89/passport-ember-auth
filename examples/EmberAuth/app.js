@@ -1,7 +1,7 @@
 var express = require('express')
   , passport = require('passport')
   , util = require('util')
-  , BearerStrategy = require('passport-http-bearer').Strategy;
+  , EmberAuthStrategy = require('passport-ember-auth').Strategy;
 
 
 var users = [
@@ -20,16 +20,16 @@ function findByToken(token, fn) {
 }
 
 
-// Use the BearerStrategy within Passport.
+// Use the EmberAuthStrategy within Passport.
 //   Strategies in Passport require a `validate` function, which accept
 //   credentials (in this case, a token), and invoke a callback with a user
 //   object.
-passport.use(new BearerStrategy({
+passport.use(new EmberAuthStrategy({
   },
   function(token, done) {
     // asynchronous validation, for effect...
     process.nextTick(function () {
-      
+
       // Find the user by token.  If there is no user with the given token, set
       // the user to `false` to indicate failure.  Otherwise, return the
       // authenticated `user`.  Note that in a production-ready application, one
@@ -43,20 +43,20 @@ passport.use(new BearerStrategy({
   }
 ));
 
-/* 
+/*
 // Return back the request object example by passing in options "passReqToCallback": true
-// Use the BearerStrategy within Passport.
+// Use the EmberAuthStrategy within Passport.
 //   Strategies in Passport require a `validate` function, which accept
 //   credentials (in this case, a token), and invoke a callback with a user
 //   object.
-passport.use(new BearerStrategy({ "passReqToCallback": true },
+passport.use(new EmberAuthStrategy({ "passReqToCallback": true },
   function(req, token, done) {
-  	
+
   	//req is passed back here
   	console.log(req);
     // asynchronous validation, for effect...
     process.nextTick(function () {
-      
+
       // Find the user by token.  If there is no user with the given token, set
       // the user to `false` to indicate failure.  Otherwise, return the
       // authenticated `user`.  Note that in a production-ready application, one
@@ -73,24 +73,23 @@ passport.use(new BearerStrategy({ "passReqToCallback": true },
 
 
 
-var app = express.createServer();
+var app = express();
 
 // configure Express
 app.configure(function() {
   app.use(express.logger());
   // Initialize Passport!  Note: no need to use session middleware when each
-  // request carries authentication credentials, as is the case with HTTP
-  // Bearer.
+  // request carries authentication credentials, as is the case with EmberAuth.
   app.use(passport.initialize());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
 
 
-// curl -v http://127.0.0.1:3000/?access_token=123456789
+// curl -v http://127.0.0.1:3000/?auth_token=123456789
 app.get('/',
-  // Authenticate using HTTP Bearer credentials, with session support disabled.
-  passport.authenticate('bearer', { session: false }),
+  // Authenticate using EmberAuth credentials, with session support disabled.
+  passport.authenticate('EmberAuth', { session: false }),
   function(req, res){
     res.json({ username: req.user.username, email: req.user.email });
   });

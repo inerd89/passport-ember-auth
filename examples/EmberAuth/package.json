@@ -1,0 +1,9 @@
+{
+  "name": "passport-ember-auth-examples-EmberAuth",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": ">= 0.0.0",
+    "passport": ">= 0.0.0",
+    "passport-ember-auth": "git://github.com/inerd89/passport-ember-auth.git"
+  }
+}
