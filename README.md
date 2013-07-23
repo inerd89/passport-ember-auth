@@ -59,8 +59,7 @@ as a valid server response when issuing tokens.
 
 ## Examples
 
-Coming soon.
-<!-- For a complete, working example, refer to the [EmberAuth example](https://github.com/inerd89/passport-ember-auth/tree/master/examples/ember-auth). -->
+For a complete, working example, refer to the [EmberAuth example](https://github.com/inerd89/passport-ember-auth/tree/master/examples/ember-auth).
 
 ## Tests
 
