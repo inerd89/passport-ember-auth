@@ -13,10 +13,11 @@ integrated into any application or framework that supports
 
 ## Install
 
-Ember-Auth strategy is still being written. It will be published to the NPM Registry at v. 0.1.0.
+Ember-Auth strategy is still being written. It will be published to the NPM Registry at v. 0.1.0. Until then, use the following:
 
-    # not yet available
-    $ npm install passport-ember-auth
+    $ npm install git://github.com/inerd89/passport-ember-auth.git
+    
+<!-- $ npm install passport-ember-auth -->
 
 ## Usage
 
